@@ -6,10 +6,10 @@ class CircularQueue
 {
 private :
     int* arr;
-    int size;            //max size of array
-    int length;         // number of elements
-    int front;         //front element on queue
-    int rear;         //last element on queue
+    int size;    //max size of array
+    int length; // number of elements
+    int front; //front element on queue
+    int rear; //last element on queue
 public:
     CircularQueue(int s)
     {
@@ -38,7 +38,8 @@ public:
             cout << "Queue is Full, you can't enqeueu" << endl;
             return;
         }
-        rear = (rear+1) % size ;   // % for circular
+        rear = (rear+1) % size ;  
+                      // % for circular
         arr[rear] = value;
         length++;
     }
@@ -50,7 +51,8 @@ public:
             return -1;
         }
         int delvalue = arr[front];
-        front = (front + 1) % size;   // % for circular
+        front = (front + 1) % size;  
+                    // % for circular
         length--;
         return delvalue;
     }
